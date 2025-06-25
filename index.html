@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivium Technology Group — Unleash the Future</title>
+  <link rel="icon" href="/assets/img/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@500;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <style>
+    :root {
+      --primary: #b38b59;
+      --secondary: #113e21;
+      --bg-light: #f0f0f0;
+      --bg-lighter: #fefefe;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-lighter);
+      color: #111;
+      scroll-behavior: smooth;
+    }
+    h1, h2, h3 {
+      font-family: 'Orbitron', sans-serif;
+    }
+    section {
+      scroll-margin-top: 96px;
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    .glass {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(12px);
+      border-radius: 1rem;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+      padding: 2rem;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .glass:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    }
+    .slide-in {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <header class="fixed w-full z-50 bg-white/80 backdrop-blur shadow px-6 py-4 flex justify-between items-center">
+    <div class="text-xl font-bold text-[var(--secondary)]">TRIVIUM</div>
+    <nav class="space-x-4 text-sm font-semibold text-gray-700">
+      <a href="#home" class="hover:text-[var(--primary)]">Home</a>
+      <a href="#about" class="hover:text-[var(--primary)]">About</a>
+      <a href="#solutions" class="hover:text-[var(--primary)]">Solutions</a>
+      <a href="#industries" class="hover:text-[var(--primary)]">Industries</a>
+      <a href="#news" class="hover:text-[var(--primary)]">News</a>
+      <a href="#careers" class="hover:text-[var(--primary)]">Careers</a>
+      <a href="#contact" class="hover:text-[var(--primary)]">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home" class="min-h-screen flex items-center justify-center flex-col text-center bg-[var(--bg-light)] px-6 pt-28 pb-16">
+    <h1 class="text-4xl md:text-6xl font-bold text-[var(--secondary)] mb-4 slide-in">Trivium Technology Group</h1>
+    <p class="text-lg text-gray-700 max-w-2xl slide-in">AI Solutions Across Agriculture, Healthcare & Cybersecurity — Designed for Impact, Engineered for the Future.</p>
+    <a href="#solutions" class="mt-8 px-6 py-3 bg-[var(--primary)] text-white rounded hover:bg-[var(--secondary)] transition slide-in">Explore Solutions</a>
+  </section>
+
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-[var(--secondary)] mb-8">About Us</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass"> <h3 class="text-lg font-semibold text-[var(--primary)]">Our Mission</h3> <p>To pioneer responsible AI tailored for real-world needs across Africa’s growing digital landscape.</p></div>
+        <div class="glass"> <h3 class="text-lg font-semibold text-[var(--primary)]">Our Vision</h3> <p>Empowering industries through intelligent, adaptable systems that drive progress and resilience.</p></div>
+        <div class="glass"> <h3 class="text-lg font-semibold text-[var(--primary)]">Leadership</h3> <p>Founded by Geddy Wendot, a trailblazer in AI and cybersecurity with a passion for Africa’s tech evolution.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="solutions" class="py-24 bg-[var(--bg-light)]">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-[var(--secondary)] mb-12">Our Solutions</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass"><h3 class="text-xl font-semibold text-[var(--primary)]">🌾 MavunoWatch</h3><p>AI-powered crop monitoring and yield prediction for sustainable smart farming.</p></div>
+        <div class="glass"><h3 class="text-xl font-semibold text-[var(--primary)]">🧬 AfyaGuardian AI</h3><p>Early-warning system for public health management and resource optimization.</p></div>
+        <div class="glass"><h3 class="text-xl font-semibold text-[var(--primary)]">🛡️ Cyber-AI</h3><p>AI-enhanced threat detection and prevention for modern cybersecurity resilience.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="industries" class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-[var(--secondary)] mb-6">Industries We Serve</h2>
+      <ul class="text-gray-700 space-y-2 list-disc list-inside">
+        <li>Agriculture & AgTech</li>
+        <li>Public Health & Medical Infrastructure</li>
+        <li>Cybersecurity & Information Systems</li>
+        <li>Education & Research</li>
+        <li>Small Business & Startups</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="news" class="py-24 bg-[var(--bg-light)]">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-[var(--secondary)] mb-6">News & Insights</h2>
+      <p class="text-gray-600">Coming soon: Stay tuned for blogs, research, and innovations from Trivium.</p>
+    </div>
+  </section>
+
+  <section id="careers" class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-[var(--secondary)] mb-6">Careers</h2>
+      <p class="text-gray-700">Looking to join a forward-thinking team? We’ll be opening roles for developers, data scientists, and innovators soon.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 bg-[var(--bg-light)]">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-[var(--secondary)] mb-6">Contact</h2>
+      <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input type="text" placeholder="Name" class="border border-gray-300 p-3 rounded" />
+        <input type="email" placeholder="Email" class="border border-gray-300 p-3 rounded" />
+        <textarea placeholder="Your message" rows="4" class="md:col-span-2 border border-gray-300 p-3 rounded"></textarea>
+        <button type="submit" class="md:col-span-2 bg-[var(--primary)] text-white py-3 rounded hover:bg-[var(--secondary)] transition">Send Message</button>
+      </form>
+      <p class="mt-6 text-gray-600">Our HQ is located in Nairobi, Kenya.</p>
+    </div>
+  </section>
+
+  <footer class="py-6 text-center text-sm text-gray-500 bg-white border-t">© 2025 Trivium Technology Group. All rights reserved.</footer>
+
+  <script>
+    gsap.utils.toArray("section").forEach((sec, i) => {
+      gsap.to(sec, {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: sec,
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        }
+      });
+    });
+    gsap.to(".slide-in", {
+      scrollTrigger: {
+        trigger: "#home",
+        start: "top 90%",
+      },
+      opacity: 1,
+      x: 0,
+      stagger: 0.2,
+      duration: 1.2,
+      ease: "back.out(1.7)"
+    });
+  </script>
+</body>
+</html>
